@@ -8,16 +8,16 @@
 <body>
     <h1>Add Game</h1>
 
-    <form>
+    <form action="/users/<%= user._id %>/games" method="POST">
         <label for="title">Title:</label>
     <input type="text" name="title" id="title">
     <br>
     <label for="difficulty">Difficulty:</label>
     <select name="difficulty" id="difficulty">
-        <option value="not">Not Difficult</option>
-        <option value="somewhat">Somewhat Difficult</option>
-        <option value="very">Very Difficult</option>
-        <option value="imp">Impossible</option>
+        <option value="Not Difficult">Not Difficult</option>
+        <option value="Somewhat Difficult">Somewhat Difficult</option>
+        <option value="Very Difficult">Very Difficult</option>
+        <option value="Impossible">Impossible</option>
     </select>
     <br>
     <label for="isCompleted">Game Completed?</label>
@@ -25,11 +25,11 @@
     <br>
     <label for="gamingPlatform">Platform:</label>
     <select name="gamingPlatform" id="gamingPlatform">
-        <option value="pc">PC</option>
-        <option value="playstation">PlayStation</option>
-        <option value="xbox">XBOX</option>
-        <option value="nintendo">Nintendo</option>
-        <option value="mobile">Mobile</option>
+        <option value="PC">PC</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="XBOX">XBOX</option>
+        <option value="Nintendo">Nintendo</option>
+        <option value="Mobile">Mobile</option>
     </select>
     <br>
     <label for="notes">Notes:</label>

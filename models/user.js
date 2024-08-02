@@ -34,7 +34,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  game: [gameSchema],
+  games: [gameSchema],
 
 });
 

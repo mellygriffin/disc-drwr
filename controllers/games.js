@@ -19,8 +19,24 @@ router.get('/', async (req, res) => {
 });
 
 //GET /games/new
-router.get("/new", (req, res) => {
-    res.render('games/new.ejs');
+router.get("/new", async (req, res) => {
+    const currentUser = await User.findById(req.session.user._id);
+    res.render('games/new.ejs', {
+        user: currentUser,
+});
+});
+
+//POST /games create route STILL WIP
+router.post('/', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        currentUser.games.push(req.body);
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/games`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
 });
 
 
