@@ -17,7 +17,7 @@
     <% if (games) { %>
         <% games.forEach((game) => { %>
             <li>
-                <a href="/users/<%= user._id%>/games/<%= game._id %>">
+                <a href="/users/<%=user._id%>/games/<%=game._id %>">
             <%= game.title %>
             </a>
             </li>

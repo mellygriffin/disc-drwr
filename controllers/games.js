@@ -39,6 +39,19 @@ router.post('/', async (req, res) => {
     }
 });
 
+//SHOW route
+router.get("/:gameId", async (req, res) => {
+    try {
+        const foundGame = await Game.findById(req.params.gameId);
+        res.render('games', {
+            game: foundGame,
+        });
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    };
+});
+
 //DELETE route
 
 
