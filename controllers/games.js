@@ -54,7 +54,17 @@ router.get("/:gameId", async (req, res) => {
 });
 
 //DELETE route
-
+router.delete('/:gameId', async (req, res) => {
+    try {
+        const currentUser = await User.findbyId(req.session.user._id);
+        currentUser.games.id(req.params.gameId).deleteOne();
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/games`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/')
+    }
+});
 
 
 module.exports = router;
