@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
+const isSignedIn = require('./middleware/is-signed-in.js');
+const passUserToView = require('./middleware/pass-user-to-view.js');
 
 const authController = require('./controllers/auth.js');
 const gamesController = require('./controllers/games.js');
@@ -30,6 +32,8 @@ app.use(
   })
 );
 
+app.use(passUserToView);
+
 app.get('/', (req, res) => {//home page
   res.render('index.ejs', {
     user: req.session.user,
@@ -39,6 +43,7 @@ app.get('/', (req, res) => {//home page
 
 
 app.use('/auth', authController);
+app.use(isSignedIn);
 app.use('/users/:userId/games', gamesController);
 app.use('/users', usersController);
 
