@@ -17,19 +17,18 @@
     <h1>
         <%= game.title %>
     </h1>
+    <div class="desc">
     <p>
-        <%= game.difficulty %>
-            <br>
-            <%= game.isCompleted %>
-                <br>
-                <%= game.gamingPlatform %>
-                    <br>
-                    <%= game.notes %>
+        <p class="diff"><%= game.difficulty %></p>
+            <p class="status"><%= game.isCompleted %></p>
+                <p class="platform"><%= game.gamingPlatform %></p>
+                    <p class="notes"><%= game.notes %></p>
     </p>
+    </div>
     <form action="<%= game._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
-<a href="/users/<%= user._id %>/games/<%= game._id %>/edit">Edit Game</a>
+<a href="/users/<%= user._id %>/games/<%= game._id %>/edit" class="clickable">Edit Game</a>
 
 </body>
 

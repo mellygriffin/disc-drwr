@@ -13,7 +13,7 @@
     <form action="/users/<%= user._id %>/games/<%= game._id %>?_method=PUT" method="POST">
         <label for="title">Title:</label>
     <input type="text" name="title" id="title" value="<%= game.title %>">
-    <br>
+    <p>
     <label for="difficulty">Difficulty:</label>
     <select name="difficulty" id="difficulty" value="">
         <option value="Not Difficult" <% if (game.difficulty === `Not Difficult`) { %>selected<% }%>>Not Difficult</option>
@@ -21,7 +21,7 @@
         <option value="Very Difficult"  <% if (game.difficulty === `Very Difficult`) { %>selected<% }%>>Very Difficult</option>
         <option value="Impossible"  <% if (game.difficulty === `Impossible`) { %>selected<% }%>>Impossible</opion>
     </select>
-    <br>
+    <p>
     <label for="isCompleted">Game Completed?</label>
     <input type="checkbox" name="isCompleted <% if (game.isCompleted) { %>checked<% } %>/>
     <br>
@@ -33,16 +33,16 @@
         <option value="Nintendo" <% if (game.gamingPlatform === `Nintendo`) { %>selected<% }%>>Nintendo</option>
         <option value="Mobile" <% if (game.gamingPlatform === `Mobile`) { %>selected<% }%>>Mobile</option>
     </select>
-    <br>
+    <p>
     <label for="notes">Notes:</label>
     <input type="text" name="notes" id="notes" value="<%= game.notes %>">
-    <br>
+    <p>
 
     <a href="/users/<%=user._id%>/games/<%=game._id %>">
         <button type="submit">Update Game</button>
     </a>
 
     </form>
-<a href="/users/<%=user._id%>/games">Back to Games</a>
+<a href="/users/<%=user._id%>/games" class="clickable">Back to Games</a>
 </body>
 </html>

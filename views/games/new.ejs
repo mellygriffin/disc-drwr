@@ -13,7 +13,7 @@
     <form action="/users/<%= user._id %>/games" method="POST">
         <label for="title">Title:</label>
     <input type="text" name="title" id="title">
-    <br>
+    <p>
     <label for="difficulty">Difficulty:</label>
     <select name="difficulty" id="difficulty">
         <option value="Not Difficult">Not Difficult</option>
@@ -21,10 +21,10 @@
         <option value="Very Difficult">Very Difficult</option>
         <option value="Impossible">Impossible</option>
     </select>
-    <br>
+    <p>
     <label for="isCompleted">Game Completed?</label>
     <input type="checkbox" checked="checked" />
-    <br>
+    <p>
     <label for="gamingPlatform">Platform:</label>
     <select name="gamingPlatform" id="gamingPlatform">
         <option value="PC">PC</option>
@@ -33,10 +33,10 @@
         <option value="Nintendo">Nintendo</option>
         <option value="Mobile">Mobile</option>
     </select>
-    <br>
+    <p>
     <label for="notes">Notes:</label>
     <input type="text" name="notes" id="notes">
-    <br>
+    <p>
 
     <button type="submit">Create</button>
     </form>

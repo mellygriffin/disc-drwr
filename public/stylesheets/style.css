@@ -13,18 +13,53 @@
 
   body {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    div {
-        display: flex;
-        flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-flow: column wrap;
+      height: 100vh;
+      width: 100vw;
     }
     
-    .nav {
-      margin: auto;
+    nav {
+      order: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
+
+    h1 {
+        order: 2;
+        align-self: center;
+    }
+
+    .clickable {
+        order: 3;
+        align-self: center;
+    }
+
+    ul {
+        order: 4;
+        align-self: center;
+        list-style-type: none;
+    }
+
+    form {
+        order: 4;
+        align-self: center;
+    }
+
+    .desc {
+        order: 4;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+  
+
+
+
 
 
