@@ -80,5 +80,7 @@ router.get('/:gameId/edit', async (req, res) => {
     };
 });
 
+//UPDATE route
+
 
 module.exports = router;

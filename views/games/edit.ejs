@@ -21,7 +21,7 @@
     </select>
     <br>
     <label for="isCompleted">Game Completed?</label>
-    <input type="checkbox" checked="checked" />
+    <input type="checkbox" name="isCompleted <% if (game.isCompleted) { %>checked<% } %>/>
     <br>
     <label for="gamingPlatform">Platform:</label>
     <select name="gamingPlatform" id="gamingPlatform">
