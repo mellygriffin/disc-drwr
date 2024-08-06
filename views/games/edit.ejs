@@ -6,6 +6,7 @@
     <title>Edit Game</title>
 </head>
 <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Edit Game</h1>
 
     <form action="/users/<%= user._id %>?_method=PUT" method="POST">
@@ -25,11 +26,11 @@
     <br>
     <label for="gamingPlatform">Platform:</label>
     <select name="gamingPlatform" id="gamingPlatform">
-        <option value="PC">PC</option>
-        <option value="PlayStation">PlayStation</option>
-        <option value="XBOX">XBOX</option>
-        <option value="Nintendo">Nintendo</option>
-        <option value="Mobile">Mobile</option>
+        <option value="PC" <% if (game.gamingPlatform === `PC`) { %>selected<% }%>>PC</option>
+        <option value="PlayStation" <% if (game.gamingPlatform === `PlayStation`) { %>selected<% }%>>PlayStation</option>
+        <option value="XBOX" <% if (game.gamingPlatform === `XBOX`) { %>selected<% }%>>XBOX</option>
+        <option value="Nintendo" <% if (game.gamingPlatform === `Nintendo`) { %>selected<% }%>>Nintendo</option>
+        <option value="Mobile" <% if (game.gamingPlatform === `Mobile`) { %>selected<% }%>>Mobile</option>
     </select>
     <br>
     <label for="notes">Notes:</label>
@@ -38,6 +39,6 @@
 
     <button type="submit">Update Game</button>
     </form>
-<a href="/games">Back to My Games</a>
+<a href="/users/<%=user._id%>/games">Back to Games</a>
 </body>
 </html>

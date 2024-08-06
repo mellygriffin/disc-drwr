@@ -6,6 +6,7 @@
     <title>Add Game</title>
 </head>
 <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Add Game</h1>
 
     <form action="/users/<%= user._id %>/games" method="POST">
