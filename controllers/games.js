@@ -80,7 +80,21 @@ router.get('/:gameId/edit', async (req, res) => {
     };
 });
 
-//UPDATE route
+//UPDATE route PUT 
+router.put('/:gameId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const game = currentUser.games.id(req.params.gameId);
+        game.set(req.body);
+        await currentUser.save();
+        res.redirect(
+            `/users/${currentUser._id}/games/${req.params.gameId}`
+        );
+    } catch (error) {
+        console.log(error);
+        res.redirect('/')
+    }
+});
 
 
 module.exports = router;

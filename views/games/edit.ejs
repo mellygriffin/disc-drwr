@@ -9,7 +9,7 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit Game</h1>
 
-    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+    <form action="/users/<%= user._id %>/games/<%= game._id %>?_method=PUT" method="POST">
         <label for="title">Title:</label>
     <input type="text" name="title" id="title" value="<%= game.title %>">
     <br>
@@ -37,7 +37,10 @@
     <input type="text" name="notes" id="notes" value="<%= game.notes %>">
     <br>
 
-    <button type="submit">Update Game</button>
+    <a href="/users/<%=user._id%>/games/<%=game._id %>">
+        <button type="submit">Update Game</button>
+    </a>
+
     </form>
 <a href="/users/<%=user._id%>/games">Back to Games</a>
 </body>
