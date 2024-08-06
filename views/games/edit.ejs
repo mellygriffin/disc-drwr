@@ -13,11 +13,11 @@
     <input type="text" name="title" id="title" value="<%= game.title %>">
     <br>
     <label for="difficulty">Difficulty:</label>
-    <select name="difficulty" id="difficulty">
-        <option value="Not Difficult">Not Difficult</option>
-        <option value="Somewhat Difficult">Somewhat Difficult</option>
-        <option value="Very Difficult">Very Difficult</option>
-        <option value="Impossible">Impossible</option>
+    <select name="difficulty" id="difficulty" value="">
+        <option value="Not Difficult" <% if (game.difficulty === `Not Difficult`) { %>selected<% }%>>Not Difficult</option>
+        <option value="Somewhat Difficult"  <% if (game.difficulty === `Somewhat Difficult`) { %>selected<% }%>>Somewhat Difficult</option>
+        <option value="Very Difficult"  <% if (game.difficulty === `Very Difficult`) { %>selected<% }%>>Very Difficult</option>
+        <option value="Impossible"  <% if (game.difficulty === `Impossible`) { %>selected<% }%>>Impossible</opion>
     </select>
     <br>
     <label for="isCompleted">Game Completed?</label>
