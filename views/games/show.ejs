@@ -17,8 +17,10 @@
     <h1>
         <%= game.title %>
     </h1>
+
     <div class="desc">
     <p>
+        <div class="info">
         <p class="diff">
         <% if (game.difficulty === "Not Difficult") { %>
             <p><b>Rated:</b> Not Difficult 💤</p>
@@ -38,11 +40,14 @@
                     <% } %>
                 <p class="platform"><%= game.gamingPlatform %></p>
             </p>
+            </div>
+            <p class="notes"><%= game.notes %></p>
         </div>
-        <p class="notes"><%= game.notes %></p>
     <form action="<%= game._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
+    <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="new_img">
+
 <a href="/users/<%= user._id %>/games/<%= game._id %>/edit" class="clickable">Edit Game</a>
 
 </body>
