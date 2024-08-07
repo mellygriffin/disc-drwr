@@ -19,7 +19,17 @@
     </h1>
     <div class="desc">
     <p>
-        <p class="diff"><%= game.difficulty %></p>
+        <p class="diff">
+        <% if (game.difficulty === "Not Difficult") { %>
+            <p><b>Rated:</b> Not Difficult 💤</p>
+            <% } else if (game.difficulty === "Somewhat Difficult") { %>
+                <p><b>Rated:</b> Somewhat Difficult 💢</p>
+                <% } else if (game.difficulty === "Very Difficult") { %>
+                    <p><b>Rated:</b> Very Difficult 🔥</p>
+                <% } else { %>
+                    <p><b>Rated:</b> Impossible 💀</p>
+                </p>
+                <% } %>
             <p class="status">
             <% if (game.isCompleted) { %>
                 <p>Game Complete! ✅ </p>
