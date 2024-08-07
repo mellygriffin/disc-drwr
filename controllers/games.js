@@ -26,9 +26,14 @@ router.get("/new", async (req, res) => {
 });
 });
 
-//POST /games create route STILL WIP
+//POST /games create route
 router.post('/', async (req, res) => {
     try {
+        if (req.body.isCompleted === "on") {
+            req.body.isCompleted = true;
+        } else {
+            req.body.isCompleted = false;
+        }
         const currentUser = await User.findById(req.session.user._id);
         currentUser.games.push(req.body);
         await currentUser.save();
@@ -83,6 +88,11 @@ router.get('/:gameId/edit', async (req, res) => {
 //UPDATE route PUT 
 router.put('/:gameId', async (req, res) => {
     try {
+        if (req.body.isCompleted === "on") {
+            req.body.isCompleted = true;
+        } else {
+            req.body.isCompleted = false;
+        }
         const currentUser = await User.findById(req.session.user._id);
         const game = currentUser.games.id(req.params.gameId);
         game.set(req.body);

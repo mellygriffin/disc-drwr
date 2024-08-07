@@ -20,11 +20,16 @@
     <div class="desc">
     <p>
         <p class="diff"><%= game.difficulty %></p>
-            <p class="status"><%= game.isCompleted %></p>
+            <p class="status">
+            <% if (game.isCompleted) { %>
+                <p>Game Complete! ✅ </p>
+                <% } else { %>
+                    <p>This game is unfinished... ❌ </p>
+                    <% } %>
                 <p class="platform"><%= game.gamingPlatform %></p>
-                    <p class="notes"><%= game.notes %></p>
-    </p>
-    </div>
+            </p>
+        </div>
+        <p class="notes"><%= game.notes %></p>
     <form action="<%= game._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
