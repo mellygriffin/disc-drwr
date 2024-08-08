@@ -12,7 +12,7 @@
 
     <a href="/users/<%=user._id%>/games/new" class="clickable">Add Game</a>
     <br>
-    
+    <div class="gameslist">
     <ul>
         <% if (games) { %>
             <% games.forEach((game) => { %>
@@ -25,7 +25,7 @@
                 <% } else { %> There's nothing here...
                 <% } %>
             </ul>
-            
+            </div>
             <img src="/assets/Disc_Main.png" alt="Plain Save Disc" id="game_index_img">
             
 </body>

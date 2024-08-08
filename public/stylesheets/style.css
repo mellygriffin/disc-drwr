@@ -59,7 +59,7 @@
         box-shadow: 0 5px #55928a;
     }
 
-    button {
+    #deletebtn {
         background-color: #A5D4B4;
         color: white;
         font-weight: bold;
@@ -76,12 +76,43 @@
         box-shadow: 0 5px #67a27a;
     }
 
+    button {
+        background-color: #A5D4B4;
+        color: white;
+        font-weight: bold;
+        font-size: 1.4em;
+        width: 10em;
+        padding: 5px 15px;
+        margin: 15px;
+        border-radius: 25px;
+        border-bottom: #67a27a;
+        border-left: #A5D4B4;
+        border-right: #A5D4B4;
+        border-top: #A5D4B4;
+        text-align: center;
+        box-shadow: 0 5px #67a27a;
+    }
+    
+    .gameslist {
+        order: 3;
+        font-size: 4vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     ul {
-        order: 4;
         text-align: left;
         list-style-type: none;
         font-weight: bold;
+        background:rgb(248, 243, 251);
+        padding: 10px;
+        width: max-content;
+        border-left: rgb(92, 59, 212);
+        border-style: none none none solid;
+        border-width: thick;
     }
+
 
     form {
         order: 4;
@@ -89,8 +120,11 @@
     }
 
     .desc {
+        order: 5;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         text-align: left;
     }
 
@@ -159,19 +193,19 @@
 
     #edit_img {
         order: 5;
-        width: 300px;
-        opacity: 100%;
+        width: 500px;
+        opacity: 20%;
         gap: 0px;
         align-items: end;
         position: relative;
-        top: 0vh;
         left: 0px;
+        bottom: 200px;
         z-index:-1;
     }
     
     #new_img {
-        order: 5;
-        width: 200px;
+        order: 3;
+        width: 400px;
     }
 
 

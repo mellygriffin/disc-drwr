@@ -41,12 +41,12 @@
                 <p class="platform"><%= game.gamingPlatform %></p>
             </p>
             </div>
+            <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="new_img">
             <p class="notes"><%= game.notes %></p>
         </div>
     <form action="<%= game._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
+        <button type="submit" id="deletebtn">Delete</button>
     </form>
-    <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="new_img">
 
 <a href="/users/<%= user._id %>/games/<%= game._id %>/edit" class="clickable">Edit Game</a>
 
