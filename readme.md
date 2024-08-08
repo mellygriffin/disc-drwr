@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="public/assets/Disc_Click.png" width="339.5" height="195">
+  <img src="public/assets/Disc_Click.png" width="200" height="200">
 </div>
 
   <div id="description" align="center">
@@ -30,6 +30,7 @@
   ## :computer: Technologies Used
 
   ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+  ![Google Slides](https://img.shields.io/badge/Google_Slides-14233C)
   ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
   ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
   ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)
@@ -37,7 +38,7 @@
   ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
   ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-## :love_letter: Getting Started
+## :minidisc: Getting Started
 
   <summary> User Guide</summary>
     1. Sign Up to create a username and password for your personal library.<p><p>
