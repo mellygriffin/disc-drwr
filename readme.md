@@ -48,9 +48,9 @@
     5. Delete any games by selecting them then clicking the "Delete" button on the information page.<p>
 <p>
 <details open>
-  <summary> Deployed Link (GitHub) </summary>
-  <a href="#"
-    > #</a
+  <summary>Deployed Link (Heroku)</summary>
+  <a href="https://disc-drwr-d0be5e79009e.herokuapp.com/"
+    >Disc Drwr</a
   >
 </details>
 
