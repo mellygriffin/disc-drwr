@@ -1,18 +1,18 @@
 <div id="header" align="center">
-  <img src="./assets/code-logo.png" width="339.5" height="195">
+  <img src="public/assets/Disc_Click.png" width="339.5" height="195">
 </div>
 
   <div id="description" align="center">
 
   # Disc Drwr
 
-  ### [CLICK TO DEMO](https://mellygriffin.github.io/code-for-love-Project1/)
+  ### [GITHUB LINK](https://github.com/mellygriffin/disc-drwr)
 
   ##### Melissa Griffin
 
-  ## :hearts: Description
+  ## :floppy_disk: Description
 
- Desc here.
+ "Disc Drwr" is your new personal video game progress tracker and library. Log games you've played, or plan to play and leave notes about what you've yet to do. Keep your games organized in an easy-to-read format with Disc Drwr!
 
   </div>
 
@@ -20,16 +20,16 @@
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
-  | <h3>Home Screen, no options selected</h3> | <img src="./assets/Code-for-Love-ss.png" width="700"/> |
-  | <h3>"Great" Reaction, best option selected</h3> | <img src="./assets/Great-ss.png" width="700"/> |
-  | <h3>"Good" Reaction, neutral option selected</h3> | <img src="./assets/Good-ss.png" width="700"/> |
-  | <h3>"Bad" Reaction, worst option selected</h3> | <img src="./assets/Bad-ss.png" width="700"/> |
+  | <h3>Home Screen, no login</h3> | <img src="/public/assets/Home_NoLog_ss.png" width="700"/> |
+  | <h3>"Home Screen, logged user</h3> | <img src="/public/assets/Home_NoLog_ss.png" width="700"/> |
+  | <h3>My Games Screen</h3> | <img src="/public/assets/MyGames_ss.png" width="700"/> |
+  | <h3>Add Game Screen</h3> | <img src="/public/assets/AddGame_ss.png" width="700"/> |
+  | <h3>Game Information Screen</h3> | <img src="/public/assets/GameInfo_ss.png" width="700"/> |
+   | <h3>Edit Game Screen</h3> | <img src="/public/assets/EditGame_ss.png" width="700"/> |
 
   ## :computer: Technologies Used
 
   ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-  ![Clip Paint Studio](https://img.shields.io/badge/Clip_Paint_Studio-14233C)
-  ![GarageBand](https://img.shields.io/badge/GarageBand-14233C)
   ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
   ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
   ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)
@@ -39,23 +39,24 @@
 
 ## :love_letter: Getting Started
 
-  <summary> How to Play</summary>
-    1. Choose between the two categories of topics by clicking either the "About Me" or "Hobbies and Interests" buttons.<p><p>
-    2. Choose an answer to the question the npc poses to you on your date. Click the appropriate response by choosing from the three options on the three buttons below the npc.<p>
-    3. Continue to answer questions until you receive one of three results: "Date Success", "Maybe they will call back?" or "Date Failure...".<p>
-    4. Click the "Try again?" button below your result to reset the game and try again.<p>
+  <summary> User Guide</summary>
+    1. Sign Up to create a username and password for your personal library.<p><p>
+    2. Navigate to the My Games page and click New Game to add games to your library.<p>
+    3. Edit games by selecting the game you wish to change and clicking "Edit Game".<p>
+    4. Finalize your changes by clicking the "Update Game" button.<p>
+    5. Delete any games by selecting them then clicking the "Delete" button on the information page.<p>
 <p>
 <details open>
   <summary> Deployed Link (GitHub) </summary>
-  <a href="https://mellygriffin.github.io/code-for-love-Project1/"
-    > https://mellygriffin.github.io/code-for-love-Project1/</a
+  <a href="#"
+    > #</a
   >
 </details>
 
 ## :construction: Upcoming Features
 
-- :white_square_button: Third topic choice with array of new questions
+- :white_square_button: Graphics Updates
 
-- :white_square_button: Second date option, choose between two individuals at the start
+- :white_square_button: Community Hub, allow users to see other users game progress and libraries
 
-- :white_square_button: Refresh graphics
+- :white_square_button: User Profiles
