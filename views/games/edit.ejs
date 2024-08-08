@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Edit Game</title>
 </head>
+
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit Game</h1>
+        <h1>Edit Game</h1>
 
-    <form action="/users/<%= user._id %>/games/<%= game._id %>?_method=PUT" method="POST">
-        <label for="title">Title:</label>
-    <input type="text" name="title" id="title" value="<%= game.title %>">
-    <p>
-    <label for="difficulty">Difficulty:</label>
-    <select name="difficulty" id="difficulty" value="">
-        <option value="Not Difficult" <% if (game.difficulty === `Not Difficult`) { %>selected<% }%>>Not Difficult</option>
-        <option value="Somewhat Difficult"  <% if (game.difficulty === `Somewhat Difficult`) { %>selected<% }%>>Somewhat Difficult</option>
-        <option value="Very Difficult"  <% if (game.difficulty === `Very Difficult`) { %>selected<% }%>>Very Difficult</option>
-        <option value="Impossible"  <% if (game.difficulty === `Impossible`) { %>selected<% }%>>Impossible</opion>
-    </select>
-    <p>
-    <label for="isCompleted">Game Completed?</label>
-    <input type="checkbox" name="isCompleted" id="isCompleted" <% if (game.isCompleted) { %>checked<% } %>>
-    <br>
-    <label for="gamingPlatform">Platform:</label>
-    <select name="gamingPlatform" id="gamingPlatform">
-        <option value="PC" <% if (game.gamingPlatform === `PC`) { %>selected<% }%>>PC</option>
-        <option value="PlayStation" <% if (game.gamingPlatform === `PlayStation`) { %>selected<% }%>>PlayStation</option>
-        <option value="XBOX" <% if (game.gamingPlatform === `XBOX`) { %>selected<% }%>>XBOX</option>
-        <option value="Nintendo" <% if (game.gamingPlatform === `Nintendo`) { %>selected<% }%>>Nintendo</option>
-        <option value="Mobile" <% if (game.gamingPlatform === `Mobile`) { %>selected<% }%>>Mobile</option>
-    </select>
-    <p>
-    <label for="notes">Notes:</label>
-    <input type="text" name="notes" id="notes" value="<%= game.notes %>">
-    <p>
+        <form action="/users/<%= user._id %>/games/<%= game._id %>?_method=PUT" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="<%= game.title %>">
+            <p>
+                <label for="difficulty">Difficulty:</label>
+                <select name="difficulty" id="difficulty" value="">
+                    <option value="Not Difficult" <% if (game.difficulty===`Not Difficult`) { %>selected<% }%>>Not
+                            Difficult</option>
+                    <option value="Somewhat Difficult" <% if (game.difficulty===`Somewhat Difficult`) { %>selected<% }%>
+                            >Somewhat Difficult</option>
+                    <option value="Very Difficult" <% if (game.difficulty===`Very Difficult`) { %>selected<% }%>>Very
+                            Difficult</option>
+                    <option value="Impossible" <% if (game.difficulty===`Impossible`) { %>selected<% }%>>Impossible
+                            </opion>
+                </select>
+            <p>
+                <label for="isCompleted">Game Completed?</label>
+                <input type="checkbox" name="isCompleted" id="isCompleted" <% if (game.isCompleted) { %>checked<% } %>>
+                    <br>
+                    <label for="gamingPlatform">Platform:</label>
+                    <select name="gamingPlatform" id="gamingPlatform">
+                        <option value="PC" <% if (game.gamingPlatform===`PC`) { %>selected<% }%>>PC</option>
+                        <option value="PlayStation" <% if (game.gamingPlatform===`PlayStation`) { %>selected<% }%>
+                                >PlayStation</option>
+                        <option value="XBOX" <% if (game.gamingPlatform===`XBOX`) { %>selected<% }%>>XBOX</option>
+                        <option value="Nintendo" <% if (game.gamingPlatform===`Nintendo`) { %>selected<% }%>>Nintendo
+                        </option>
+                        <option value="Mobile" <% if (game.gamingPlatform===`Mobile`) { %>selected<% }%>>Mobile</option>
+                    </select>
+                    <p>
+                        <label for="notes">Notes:</label>
+                        <input type="text" name="notes" id="notes" value="<%= game.notes %>">
+                    <p>
 
-    <a href="/users/<%=user._id%>/games/<%=game._id %>">
-        <button type="submit">Update Game</button>
-    </a>
+                        <a href="/users/<%=user._id%>/games/<%=game._id %>">
+                            <button type="submit">Update Game</button>
+                        </a>
 
-    </form>
-<a href="/users/<%=user._id%>/games" class="clickable">Back to Games</a>
-<img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="edit_img">
+        </form>
+        <a href="/users/<%=user._id%>/games" class="clickable">Back to Games</a>
+        <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="edit_img">
 
 </body>
+
 </html>

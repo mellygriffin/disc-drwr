@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add Game</title>
 </head>
+
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add Game</h1>
+        <h1>Add Game</h1>
 
-    <form action="/users/<%= user._id %>/games" method="POST">
-        <label for="title">Title:</label>
-    <input type="text" name="title" id="title">
-    <p>
-    <label for="difficulty">Difficulty:</label>
-    <select name="difficulty" id="difficulty">
-        <option value="Not Difficult">Not Difficult</option>
-        <option value="Somewhat Difficult">Somewhat Difficult</option>
-        <option value="Very Difficult">Very Difficult</option>
-        <option value="Impossible">Impossible</option>
-    </select>
-    <p>
-    <label for="isCompleted">Game Completed?</label>
-    <input type="checkbox" name="isCompleted" id="isCompleted"/>
-    <p>
-    <label for="gamingPlatform">Platform:</label>
-    <select name="gamingPlatform" id="gamingPlatform">
-        <option value="PC">PC</option>
-        <option value="PlayStation">PlayStation</option>
-        <option value="XBOX">XBOX</option>
-        <option value="Nintendo">Nintendo</option>
-        <option value="Mobile">Mobile</option>
-    </select>
-    <p>
-    <label for="notes">Notes:</label>
-    <input type="text" name="notes" id="notes">
-    <p>
+        <form action="/users/<%= user._id %>/games" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title">
+            <p>
+                <label for="difficulty">Difficulty:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="Not Difficult">Not Difficult</option>
+                    <option value="Somewhat Difficult">Somewhat Difficult</option>
+                    <option value="Very Difficult">Very Difficult</option>
+                    <option value="Impossible">Impossible</option>
+                </select>
+            <p>
+                <label for="isCompleted">Game Completed?</label>
+                <input type="checkbox" name="isCompleted" id="isCompleted" />
+            <p>
+                <label for="gamingPlatform">Platform:</label>
+                <select name="gamingPlatform" id="gamingPlatform">
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="XBOX">XBOX</option>
+                    <option value="Nintendo">Nintendo</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+            <p>
+                <label for="notes">Notes:</label>
+                <input type="text" name="notes" id="notes">
+            <p>
 
-    <button type="submit">Create</button>
-    </form>
-    <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="edit_img">
+                <button type="submit">Create</button>
+        </form>
+        <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="edit_img">
 
 </body>
+
 </html>

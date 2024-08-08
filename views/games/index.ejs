@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>My Games</title>
 </head>
+
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>My Games</h1>
+        <h1>My Games</h1>
 
-    <a href="/users/<%=user._id%>/games/new" class="clickable">Add Game</a>
-    <br>
-    <div class="gameslist">
-    <ul>
-        <% if (games) { %>
-            <% games.forEach((game) => { %>
-                <li>
-                    <a href="/users/<%=user._id%>/games/<%=game._id %>">
-                        <%= game.title %>
-                    </a>
-                </li>
-                <% }) %>
-                <% } else { %> There's nothing here...
-                <% } %>
+        <a href="/users/<%=user._id%>/games/new" class="clickable">Add Game</a>
+        <br>
+        <div class="gameslist">
+            <ul>
+                <% if (games) { %>
+                    <% games.forEach((game)=> { %>
+                        <li>
+                            <a href="/users/<%=user._id%>/games/<%=game._id %>">
+                                <%= game.title %>
+                            </a>
+                        </li>
+                        <% }) %>
+                            <% } else { %> There's nothing here...
+                                <% } %>
             </ul>
-            </div>
-            <img src="/assets/Disc_Main.png" alt="Plain Save Disc" id="game_index_img">
-            
+        </div>
+        <img src="/assets/Disc_Main.png" alt="Plain Save Disc" id="game_index_img">
+
 </body>
+
 </html>

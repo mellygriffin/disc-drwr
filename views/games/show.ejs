@@ -14,41 +14,45 @@
     <%- include('../partials/_navbar.ejs') %>
 
 
-    <h1>
-        <%= game.title %>
-    </h1>
+        <h1>
+            <%= game.title %>
+        </h1>
 
-    <div class="desc">
-    <p>
-        <div class="info">
-        <p class="diff">
-        <% if (game.difficulty === "Not Difficult") { %>
-            <p><b>Rated:</b> Not Difficult 💤</p>
-            <% } else if (game.difficulty === "Somewhat Difficult") { %>
-                <p><b>Rated:</b> Somewhat Difficult 💢</p>
-                <% } else if (game.difficulty === "Very Difficult") { %>
-                    <p><b>Rated:</b> Very Difficult 🔥</p>
-                <% } else { %>
-                    <p><b>Rated:</b> Impossible 💀</p>
+        <div class="desc">
+            <p>
+            <div class="info">
+                <p class="diff">
+                    <% if (game.difficulty==="Not Difficult" ) { %>
+                        <p><b>Rated:</b> Not Difficult 💤</p>
+                        <% } else if (game.difficulty==="Somewhat Difficult" ) { %>
+                            <p><b>Rated:</b> Somewhat Difficult 💢</p>
+                            <% } else if (game.difficulty==="Very Difficult" ) { %>
+                                <p><b>Rated:</b> Very Difficult 🔥</p>
+                                <% } else { %>
+                                    <p><b>Rated:</b> Impossible 💀</p>
                 </p>
                 <% } %>
-            <p class="status">
-            <% if (game.isCompleted) { %>
-                <p>Game Complete! ✅ </p>
-                <% } else { %>
-                    <p>This game is unfinished... ❌ </p>
-                    <% } %>
-                <p class="platform"><%= game.gamingPlatform %></p>
-            </p>
+                    <p class="status">
+                        <% if (game.isCompleted) { %>
+                            <p>Game Complete! ✅ </p>
+                            <% } else { %>
+                                <p>This game is unfinished... ❌ </p>
+                                <% } %>
+                                    <p class="platform">
+                                        <%= game.gamingPlatform %>
+                                    </p>
+                    </p>
             </div>
             <img src="/assets/Disc_Click.png" alt="Save Disc with Mouse Pointer" id="new_img">
-            <p class="notes"><%= game.notes %></p>
+            <p class="notes">
+                <%= game.notes %>
+            </p>
         </div>
-    <form action="<%= game._id %>?_method=DELETE" method="POST">
-        <button type="submit" id="deletebtn">Delete</button>
-    </form>
+        <form action="<%= game._id %>?_method=DELETE" method="POST">
+            <button type="submit" id="deletebtn">Delete</button>
+        </form>
 
-<a href="/users/<%= user._id %>/games/<%= game._id %>/edit" class="clickable">Edit Game</a>
+        <a href="/users/<%= user._id %>/games/<%= game._id %>/edit" class="clickable">Edit Game</a>
 
 </body>
 

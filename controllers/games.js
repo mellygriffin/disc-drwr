@@ -23,7 +23,7 @@ router.get("/new", async (req, res) => {
     const currentUser = await User.findById(req.session.user._id);
     res.render('games/new.ejs', {
         user: currentUser,
-});
+    });
 });
 
 //POST /games create route
@@ -74,11 +74,11 @@ router.delete('/:gameId', async (req, res) => {
 //EDIT route GET
 router.get('/:gameId/edit', async (req, res) => {
     try {
-    const currentUser = await User.findById(req.session.user._id);
-    const game = currentUser.games.id(req.params.gameId);
-    res.render('games/edit.ejs', {
-        game: game,
-    })
+        const currentUser = await User.findById(req.session.user._id);
+        const game = currentUser.games.id(req.params.gameId);
+        res.render('games/edit.ejs', {
+            game: game,
+        })
     } catch (error) {
         console.log(error);
         res.redirect('/')

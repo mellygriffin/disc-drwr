@@ -7,14 +7,14 @@ const gameSchema = new mongoose.Schema({
   },
   difficulty: {
     type: String,
-    enum: ['Not Difficult','Somewhat Difficult','Very Difficult','Impossible'],
+    enum: ['Not Difficult', 'Somewhat Difficult', 'Very Difficult', 'Impossible'],
   },
   isCompleted: {
     type: Boolean,
   },
   gamingPlatform: {
     type: String,
-    enum: ['PC','PlayStation','XBOX','Nintendo','Mobile']
+    enum: ['PC', 'PlayStation', 'XBOX', 'Nintendo', 'Mobile']
   },
   notes: {
     type: String,
