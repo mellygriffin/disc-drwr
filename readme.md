@@ -6,7 +6,7 @@
 
   # Disc Drwr
 
-  ### [GITHUB LINK](https://github.com/mellygriffin/disc-drwr)
+  ### [TRELLO LINK](https://trello.com/b/xlOHEhnp/unit-2-project-planning)
 
   ##### Melissa Griffin
 
